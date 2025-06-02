@@ -229,7 +229,7 @@ header {
 
 #about span {
   display: inline-block;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -287,7 +287,7 @@ header {
   position: absolute;
   height: auto;
   width: 550px;
-  left: 55%;
+  left: 59%;
   top: 1350px;
   object-fit: cover;
 }
@@ -301,7 +301,7 @@ header {
 #skills h3 {
   display: inline-block;
   position: absolute;
-  font-size: 30px;
+  font-size: 24px;
   left: 11.5%;
   bottom: -1630px;
 }
@@ -347,4 +347,161 @@ header {
 .whatsapp a:hover {
   transform: scale(1.1);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+/*Cards de Habilidades-----------*/
+#skills-container {
+  display: flex;
+  gap: 150px;
+  flex-wrap: wrap;
+  padding: 40px;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 420px;
+  transition: all 0.5s ease-in;
+  z-index: 2;
+}
+
+.card-1 {
+  background-color: var(--color2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  height: 500px;
+  width: 400px;
+  border-radius: 12px;
+}
+
+.card-2 {
+  background-color: var(--color2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  height: 500px;
+  width: 400px;
+  border-radius: 12px;
+}
+
+.card-3 {
+  background-color: var(--color2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  height: 500px;
+  width: 400px;
+  border-radius: 12px;
+}
+
+.text-1 h2 {
+  font-size: 30px;
+  color: var(--color4);
+  position: absolute;
+  left: 14%;
+  bottom: -2015px;
+}
+
+.text-1 span {
+  position: absolute;
+  left: 14%;
+  bottom: -1950px;
+}
+
+.text-1 span i {
+  text-decoration: none;
+  font-size: 60px;
+  color: var(--color4);
+}
+.text-1 p {
+  position: absolute;
+  bottom: -2200px;
+  left: 14%;
+  color: var(--color4);
+  font-size: 12px;
+  margin-right: 1400px;
+}
+
+.text-2 span {
+  position: absolute;
+  left: 43%;
+  bottom: -1950px;
+}
+
+.text-2 span i {
+  text-decoration: none;
+  font-size: 60px;
+  color: var(--color4);
+}
+
+.text-2 h2 {
+  font-size: 30px;
+  color: var(--color4);
+  position: absolute;
+  bottom: -2015px;
+  left: 42.5%;
+}
+
+.text-2 p {
+  position: absolute;
+  bottom: -2120px;
+  left: 42.5%;
+  color: var(--color4);
+  font-size: 12px;
+  margin-right: 820px;
+}
+
+.typing::after {
+  content: "|";
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.text-3 h2 {
+  font-size: 30px;
+  color: var(--color4);
+  position: absolute;
+  bottom: -2015px;
+  left: 71%;
+}
+
+.text-3 span {
+  position: absolute;
+  left: 71%;
+  bottom: -1950px;
+}
+
+.text-3 span img {
+  text-decoration: none;
+  font-size: 60px;
+  color: var(--color4);
+}
+
+.text-3 p {
+  position: absolute;
+  bottom: -2195px;
+  left: 71%;
+  color: var(--color4);
+  font-size: 12px;
+  margin-right: 290px;
+}
+
+#skills-container:hover .card-1,
+#skills-container:hover .card-2,
+#skills-container:hover .card-3 {
+  opacity: 0.4;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+#skills-container .card-1:hover,
+#skills-container .card-2:hover,
+#skills-container .card-3:hover {
+  opacity: 1 !important;
+  transform: scale(1.1);
 }

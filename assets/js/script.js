@@ -34,3 +34,36 @@ document.addEventListener("DOMContentLoaded", () => {
     slides[current].style.zIndex = "1";
   }, 2500);
 });
+
+const text1 = "Olá, eu sou o Pedro,";
+const text2 = "Desenvolvedor Web.";
+const h1 = document.getElementById("typing-1");
+const h2 = document.getElementById("typing-2");
+
+let i = 0;
+let j = 0;
+
+function typeFirst() {
+  if (i < text1.length) {
+    h1.textContent += text1.charAt(i);
+    h1.classList.add("typing");
+    i++;
+    setTimeout(typeFirst, 100);
+  } else {
+    h1.classList.remove("typing");
+    typeSecond();
+  }
+}
+
+function typeSecond() {
+  if (j < text2.length) {
+    h2.textContent += text2.charAt(j);
+    h2.classList.add("typing");
+    j++;
+    setTimeout(typeSecond, 100);
+  } else {
+    h2.classList.remove("typing");
+  }
+}
+
+window.onload = typeFirst;
