@@ -43,9 +43,17 @@ const h2 = document.getElementById("typing-2");
 let i = 0;
 let j = 0;
 
+function createPlaceholder(text) {
+  return text.replace(/./g, "\u00A0");
+}
+
+h1.textContent = createPlaceholder(text1);
+h2.textContent = createPlaceholder(text2);
+
 function typeFirst() {
   if (i < text1.length) {
-    h1.textContent += text1.charAt(i);
+    h1.textContent =
+      text1.substring(0, i + 1) + createPlaceholder(text1.substring(i + 1));
     h1.classList.add("typing");
     i++;
     setTimeout(typeFirst, 100);
@@ -57,7 +65,8 @@ function typeFirst() {
 
 function typeSecond() {
   if (j < text2.length) {
-    h2.textContent += text2.charAt(j);
+    h2.textContent =
+      text2.substring(0, j + 1) + createPlaceholder(text2.substring(j + 1));
     h2.classList.add("typing");
     j++;
     setTimeout(typeSecond, 100);

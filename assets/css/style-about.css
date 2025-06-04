@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap");
+
+:root {
+  --color1: #1f222b;
+  --color2: #282b34;
+  --color3: #a4bcc4;
+  --color4: #d9e0e2;
+  --color5: #f4f3f3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+  background-color: var(--color1);
+}
+
+header {
+  justify-content: space-between;
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  background-color: var(--color2);
+  top: 0;
+  height: 75px;
+  width: 100%;
+  color: var(--color5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header-nav {
+  z-index: 100;
+  left: 83%;
+  top: 3%;
+  position: fixed;
+  display: flex;
+  gap: 22px;
+}
+
+.header-logo {
+  gap: 10px;
+  z-index: 100;
+  right: 87%;
+  top: 3%;
+  position: fixed;
+  display: flex;
+}
+
+.header-nav:hover a {
+  opacity: 0.4;
+}
+
+.header-nav a:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: var(--color5);
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+#about-myself {
+  margin-top: 50px;
+  padding: 150px;
+}
+
+.about-title {
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+  gap: 10px;
+}
+
+.about-title h2 {
+  color: var(--color4);
+  font-size: 30px;
+}
+
+.about-title h3 {
+  color: var(--color3);
+}
+
+.about-subtitle {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: var(--color3);
+}
+
+.about-myself-text-1 {
+  margin-top: 60px;
+  font-size: 14px;
+  margin-right: 1000px;
+  color: var(--color5);
+}
+
+.about-topics {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-myself-text-3 {
+  margin-top: 50px;
+}
+
+.about-subtitle-2 {
+  margin-top: 40px;
+  color: var(--color3);
+}
+
+.about-myself-text-4 {
+  margin-top: 30px;
+}
+
+footer {
+  background-color: var(--color2);
+  height: 100%;
+  width: 100%;
+}
+
+.baseboard-presentation {
+  color: var(--color4);
+  padding-left: 4%;
+  padding-top: 3%;
+}
+
+.baseboard-presentation h2 {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.baseboard-presentation h3 {
+  font-size: 20px;
+}
+
+.baseboard-presentation h2,
+.baseboard-presentation h3 {
+  padding-left: 4%;
+}
+
+.baseboard-logo i {
+  display: flex;
+
+  position: relative;
+  font-size: 50px;
+  left: 10px;
+  bottom: 50px;
+}
+
+#about-img img {
+  position: absolute;
+  left: 60%;
+  top: 20%;
+  margin-top: 100px;
+  border: 2px solid var(--color3);
+  height: auto;
+  width: 650px;
+  border-radius: 10%;
+}

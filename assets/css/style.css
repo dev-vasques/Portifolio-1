@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand:wght@300..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Quicksand:wght@300..700&display=swap");
+
+/* Removi import duplicado de Ancizar Sans + Quicksand */
 
 :root {
   --color1: #1f222b;
@@ -16,9 +17,10 @@
   font-family: "Inter", sans-serif;
 }
 
+html,
 body {
   overflow-x: hidden;
-  width: 100%;
+  max-width: 100%;
   background-color: var(--color1);
 }
 
@@ -28,10 +30,9 @@ header {
   position: fixed;
   z-index: 1000;
   background-color: var(--color2);
-  top: 0%;
+  top: 0;
   height: 75px;
   width: 100%;
-  text-decoration: none;
   color: var(--color5);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -43,9 +44,6 @@ header {
   position: fixed;
   display: flex;
   gap: 22px;
-}
-
-.header-logo i {
 }
 
 .header-logo {
@@ -74,11 +72,10 @@ header {
 }
 
 #presentation img {
-  display: flex;
-  flex-direction: row;
   height: auto;
   width: 200px;
 }
+
 .vertical-line-presentation {
   width: 1px;
   height: 200px;
@@ -98,10 +95,13 @@ header {
   margin-left: 280px;
   margin-top: 270px;
   margin-bottom: 400px;
+  overflow-x: hidden;
 }
+
 #presentation h1 {
   font-size: 70px;
 }
+
 #presentation h2 {
   font-size: 65px;
 }
@@ -122,21 +122,18 @@ header {
 }
 
 #presentation-find {
+  overflow: hidden;
+  max-width: 100%;
   position: absolute;
   left: 1350px;
   top: 300px;
   font-size: 20px;
 }
 
-.photogrid-presentation img {
-  width: 200%;
-  height: auto;
-  object-fit: cover;
-}
 .icones {
+  overflow: hidden;
   display: flex;
   margin-top: 30px;
-
   gap: 60px;
   font-size: 60px;
 }
@@ -210,7 +207,6 @@ header {
 #about-text {
   gap: 20px;
   display: inline-block;
-
   margin-left: 150px;
 }
 
@@ -223,7 +219,6 @@ header {
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateX(0);
   display: inline-block;
-  color: var(--color3);
   color: var(--color5);
 }
 
@@ -282,8 +277,6 @@ header {
 }
 
 .about-img img {
-  display: flex;
-  flex-direction: row;
   position: absolute;
   height: auto;
   width: 550px;
@@ -318,10 +311,7 @@ header {
   font-size: 45px;
   color: var(--color3);
 }
-.whatsapp {
-  position: fixed;
-  z-index: 99;
-}
+
 .whatsapp {
   position: fixed;
   bottom: 20px;
@@ -348,8 +338,11 @@ header {
   transform: scale(1.1);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
-/*Cards de Habilidades-----------*/
+
+/* Cards de Habilidades ----------- */
+
 #skills-container {
+  position: relative;
   display: flex;
   gap: 150px;
   flex-wrap: wrap;
@@ -358,27 +351,10 @@ header {
   justify-content: center;
   margin-top: 420px;
   transition: all 0.5s ease-in;
-  z-index: 2;
 }
 
-.card-1 {
-  background-color: var(--color2);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  height: 500px;
-  width: 400px;
-  border-radius: 12px;
-}
-
-.card-2 {
-  background-color: var(--color2);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  height: 500px;
-  width: 400px;
-  border-radius: 12px;
-}
-
+.card-1,
+.card-2,
 .card-3 {
   background-color: var(--color2);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -388,61 +364,96 @@ header {
   border-radius: 12px;
 }
 
-.text-1 h2 {
+.text-1 h2,
+.text-2 h2,
+.text-3 h2 {
   font-size: 30px;
   color: var(--color4);
   position: absolute;
-  left: 14%;
   bottom: -2015px;
 }
 
-.text-1 span {
-  position: absolute;
+.text-1 h2 {
   left: 14%;
+}
+
+.text-2 h2 {
+  left: 42.5%;
+}
+
+.text-3 h2 {
+  left: 71%;
+}
+
+.text-1 span,
+.text-2 span,
+.text-3 span {
+  position: absolute;
   bottom: -1950px;
 }
 
-.text-1 span i {
-  text-decoration: none;
-  font-size: 60px;
-  color: var(--color4);
-}
-.text-1 p {
-  position: absolute;
-  bottom: -2200px;
+.text-1 span {
   left: 14%;
-  color: var(--color4);
-  font-size: 12px;
-  margin-right: 1400px;
 }
 
 .text-2 span {
-  position: absolute;
   left: 43%;
-  bottom: -1950px;
 }
 
+.text-3 span {
+  left: 71%;
+}
+
+.text-1 span i,
 .text-2 span i {
   text-decoration: none;
   font-size: 60px;
   color: var(--color4);
 }
 
-.text-2 h2 {
-  font-size: 30px;
-  color: var(--color4);
+.text-3 span img {
+  font-size: 60px;
+}
+
+.text-1 p,
+.text-2 p,
+.text-3 p {
   position: absolute;
-  bottom: -2015px;
-  left: 42.5%;
+  color: var(--color4);
+  font-size: 12px;
+}
+
+.text-1 p {
+  bottom: -2200px;
+  left: 14%;
+  margin-right: 1400px;
 }
 
 .text-2 p {
-  position: absolute;
   bottom: -2120px;
   left: 42.5%;
-  color: var(--color4);
-  font-size: 12px;
   margin-right: 820px;
+}
+
+.text-3 p {
+  bottom: -2195px;
+  left: 71%;
+  margin-right: 290px;
+}
+
+#skills-container:hover .card-1,
+#skills-container:hover .card-2,
+#skills-container:hover .card-3 {
+  opacity: 0.4;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+#skills-container .card-1:hover,
+#skills-container .card-2:hover,
+#skills-container .card-3:hover {
+  opacity: 1 !important;
+  transform: scale(1.1);
 }
 
 .typing::after {
@@ -462,46 +473,50 @@ header {
   }
 }
 
-.text-3 h2 {
-  font-size: 30px;
+#typing-1,
+#typing-2 {
+  display: block;
+  width: 100%;
+  min-height: 3rem;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: var(--color2);
+  height: 100%;
+  width: 100%;
+}
+
+.baseboard-presentation {
   color: var(--color4);
-  position: absolute;
-  bottom: -2015px;
-  left: 71%;
+  padding-left: 4%;
+  padding-top: 3%;
 }
 
-.text-3 span {
-  position: absolute;
-  left: 71%;
-  bottom: -1950px;
+.baseboard-presentation h2 {
+  font-weight: 300;
+  font-size: 14px;
 }
 
-.text-3 span img {
-  text-decoration: none;
-  font-size: 60px;
-  color: var(--color4);
+.baseboard-presentation h3 {
+  font-size: 20px;
 }
 
-.text-3 p {
-  position: absolute;
-  bottom: -2195px;
-  left: 71%;
-  color: var(--color4);
-  font-size: 12px;
-  margin-right: 290px;
+.baseboard-presentation h2,
+.baseboard-presentation h3 {
+  padding-left: 4%;
 }
 
-#skills-container:hover .card-1,
-#skills-container:hover .card-2,
-#skills-container:hover .card-3 {
-  opacity: 0.4;
-  transition: all 0.3s ease;
-  transform: scale(1);
-}
+.baseboard-logo i {
+  display: flex;
 
-#skills-container .card-1:hover,
-#skills-container .card-2:hover,
-#skills-container .card-3:hover {
-  opacity: 1 !important;
-  transform: scale(1.1);
+  position: relative;
+  font-size: 50px;
+  left: 10px;
+  bottom: 50px;
 }
